@@ -14,7 +14,6 @@ class Program
     {
         int numCities;
 
-        // Step 1.1: Get number of cities and city details from user
         Console.Write("Enter the number of cities: ");
         numCities = int.Parse(Console.ReadLine());
 
@@ -53,14 +52,12 @@ class Program
             cities.Add(city);
         }
 
-        // Step 1.2: Display city details
         Console.WriteLine("\nCity Details:");
         foreach (City city in cities)
         {
             Console.WriteLine($"City {cities.IndexOf(city)} - Name: {city.name}, Outbreak Level: {city.outbreakLevel}");
         }
 
-        // Step 1.3: Get event from user and perform action
         bool exit = false;
         while (!exit)
         {
@@ -125,7 +122,6 @@ class Program
                 break;
 
             case "Lockdown":
-                // Implement the lockdown logic here
                 break;
         }
     }
